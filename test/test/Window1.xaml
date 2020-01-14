@@ -1,0 +1,80 @@
+﻿<Window x:Class="test.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+       
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Title="Detector" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal" 
+        KeyDown="MainWindows_Keydown">
+    <Window.Resources>
+        <local:MapViewModel x:Key="MapViewModel" />
+    </Window.Resources>
+    <Grid Name="MyGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <esri:MapView x:Name="MyMapView" Grid.Column="0" >
+            <esri:Map>
+                <esri:ArcGISTiledLayer x:Name="Basemap1"
+                                       Source="http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity_Mobile/MapServer" />
+            </esri:Map>
+        </esri:MapView>
+        <esri:SceneView x:Name="MySceneView"  Grid.Column="1"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="30" Width="1000" Margin="0,0,0,0" VerticalAlignment="Top" >
+            <MenuItem Header="主页" Click="MenuItem_Click" Height="30" Width="60" FontSize="14">
+            </MenuItem>
+            <MenuItem Header="探空仪" Click="MenuItem_Click_1"  Height="30" Width="60" FontSize="14">
+            </MenuItem>
+            <MenuItem Header="敏感区" Click="MenuItem_Click_2"  Height="30" Width="60" FontSize="14">
+            </MenuItem>
+
+        </Menu>
+        <Border BorderThickness="1" Grid.Column="1" HorizontalAlignment="Right" Height="200" Margin="53.2,0,0,0" VerticalAlignment="Top" Width="100">
+
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.7" />
+            </Border.Background>
+            <StackPanel Margin="5">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*" />
+
+                        <ColumnDefinition Width="40" />
+
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+
+                <Separator />
+
+                <Label FontSize="16" Content="探空仪编号:" />
+
+                <TextBlock x:Name="NameLabel" />
+
+                <Label FontSize="16" Content="AboveSeaLevel:" />
+
+                <TextBlock x:Name="AboveSeaLevelLabel" />
+
+                <Label FontSize="16" Content="longitude:" />
+                <TextBlock x:Name="LonLabel" />
+                <Label FontSize="16" Content="Latitude:" />
+                <TextBlock x:Name="LatLabel" />
+            </StackPanel>
+
+
+
+        </Border>
+       
+       
+
+    </Grid>
+</Window>

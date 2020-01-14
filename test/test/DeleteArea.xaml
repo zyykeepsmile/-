@@ -1,0 +1,16 @@
+﻿<Window x:Class="test.DeleteArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Title="DeleteArea" Height="244.129" Width="510.324">
+    <Grid Margin="0,0,4,8.4">
+        <TextBlock HorizontalAlignment="Left" Margin="48,61,0,0" TextWrapping="Wrap" Text="请输入敏感区编号" VerticalAlignment="Top" Height="34" Width="105"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="225,61,0,0" TextWrapping="Wrap" Name="nn" VerticalAlignment="Top" Width="142" TextChanged="TextBox_TextChanged"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="48,122,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" Height="27"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="259,122,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click_1" Height="27"/>
+
+    </Grid>
+</Window>

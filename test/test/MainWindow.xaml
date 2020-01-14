@@ -1,0 +1,28 @@
+﻿<Window x:Class="test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1200">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="E:\VSProjects\test\back2.jpg" />
+        </Grid.Background>
+        <Button Content="探空仪轨迹" HorizontalAlignment="Left" FontFamily=" 宋体" Margin="540,421,0,0" VerticalAlignment="Top" Width="384" Click="Button_Click" Height="66" FontSize="24" Background="#FF2FBBDC">
+
+        </Button>
+        <Button Content="添加敏感区" HorizontalAlignment="Left" FontFamily=" 宋体"  Margin="540,174,0,0" VerticalAlignment="Top" Width="384" Height="71" Click="Button_Click_1" FontSize="24" RenderTransformOrigin="1.911,0.665" Background="#FF2FBBDD"/>
+
+        <TextBlock Text=" 智能控制系统" FontFamily=" 宋体" FontSize=" 50" 
+                   FontWeight="Bold" Foreground="#FF1D0549" 
+                   TextWrapping="NoWrap"  TextAlignment="Center" Margin="0,50,-0.4,701.4" ></TextBlock>
+        <Button Content="添加探空仪" HorizontalAlignment="Left" FontFamily=" 宋体" Margin="540,300,0,0" VerticalAlignment="Top" Width="384" Height="65" FontSize="24" Click="Button_Click_3" Background="#FF2FBBDD"/>
+
+    </Grid>
+
+
+</Window>
