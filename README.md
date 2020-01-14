@@ -1,2 +1,3 @@
-# GRU.ipynb----------模型训练
-#test-----------C# + WPF + Arccgis 展示
+#  
+GRU.ipynb----------GRU模型训练
+test-----------C# + WPF + Arccgis 展示
